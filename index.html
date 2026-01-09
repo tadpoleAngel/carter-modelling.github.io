@@ -1,72 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Carter Modelling</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carter Modelling | Custom 3D-Printed Home Models</title>
+  <meta name="description" content="Carter Modelling creates custom 3D-printed scale models of homes from plans. Ideal for client gifts, keepsakes, and office displays." />
   <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #38bdf8;
+      --border: #1f2937;
+    }
+
+    * { box-sizing: border-box; }
+
     body {
-      font-family: Arial, sans-serif;
-      max-width: 700px;
-      margin: 40px auto;
-      padding: 0 20px;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(180deg, #020617, #020617 60%, #020617);
+      color: var(--text);
       line-height: 1.6;
-      color: #222;
     }
-    h1, h2 {
+
+    header {
+      padding: 4rem 1.5rem 3rem;
+      text-align: center;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+
+    header p {
+      font-size: 1.25rem;
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .cta {
+      margin-top: 2rem;
+      display: inline-block;
+      padding: 0.9rem 1.5rem;
+      border-radius: 0.6rem;
+      background: var(--accent);
+      color: #020617;
       font-weight: 600;
+      text-decoration: none;
     }
+
+    section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .image-placeholder {
+      height: 220px;
+      background: linear-gradient(135deg, #020617, #111827);
+      border: 1px dashed #334155;
+      border-radius: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+      font-size: 0.95rem;
+    }
+
     footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #555;
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    footer strong { color: var(--text); }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.2rem; }
+      header p { font-size: 1.05rem; }
     }
   </style>
 </head>
 <body>
 
-<h1>Carter Modelling</h1>
+  <header>
+    <h1>Carter Modelling</h1>
+    <p>Custom 3D‑printed scale models of homes — created from plans and designed as meaningful keepsakes, client gifts, and display pieces.</p>
+    <a href="#contact" class="cta">Get in Touch</a>
+  </header>
 
-<p>
-Carter Modelling provides custom 3D-printed scale models of residential homes,
-created from client-provided plans or reference materials.
-</p>
+  <section>
+    <div class="grid">
+      <div class="card">
+        <h3>What We Do</h3>
+        <p>We convert floor plans into clean, physical 3D models that capture the exterior form of a home in a variety of display ready sizes ranging from ornament to 1 ft display pieces.</p>
+      </div>
+      <div class="card">
+        <h3>Who It’s For</h3>
+        <p>Homeowners, builders, and real estate professionals looking for a unique way to commemorate or present a home.</p>
+      </div>
+      <div class="card">
+        <h3>How It Works</h3>
+        <p>Plans are reviewed, modeled in CAD, and 3D‑printed locally in Travelers Rest, SC. Turnaround is typically around one week for standard models.</p>
+      </div>
+    </div>
+  </section>
 
-<h2>Services</h2>
-<p>
-Each project includes digital 3D modeling and a physical printed model.
-Pricing varies by size and complexity; most models start around $100.
-</p>
+  <section>
+    <h2>Example Work</h2>
+    <p style="color: var(--muted); max-width: 700px;">Below is an example of a model as a CAD design and a finished printed piece as an ornament. Final appearance may vary depending on plan complexity and requested size.</p>
+    <div class="grid" style="margin-top: 1.5rem;">
+      <img src="./assets/images/example_house.PNG" alt="CAD model of a house" height="220">
+      <div class="image-placeholder">Printed model photo (add image)</div>
+    </div>
+  </section>
 
-<h2>Delivery</h2>
-<p>
-Most orders are completed within 4–5 business days.
-Finished models are delivered locally or arranged for pickup.
-</p>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p style="color: var(--muted); max-width: 700px;">If you’re interested in learning more or discussing a potential model, feel free to reach out.</p>
+    <div class="card" style="margin-top: 1.5rem;">
+      <p><strong>Oliver Carter</strong></p>
+      <p style="font-size: 13px; margin-bottom: 1%;">founder</p>
+      <p><strong>Email:</strong> <span id="email"></span></p>
+      <p><strong>Phone:</strong> (864) 6&#56;&#54;-26&#49;&#55;</p>
+      <p style="margin-top: 0.75rem; font-size: 0.9rem; color: var(--muted);">Based in Travelers Rest, South Carolina</p>
+    </div>
+  </section>
 
-<h2>Refunds</h2>
-<p>
-Because models are custom-made, refunds are generally not available once production has begun.
-Any issues with print quality will be addressed on a case-by-case basis.
-</p>
+  <footer>
+    <p><strong>Carter Modelling</strong> — Custom 3D‑Printed Home Models</p>
+    <p>© <span id="year"></span> Carter Modelling</p>
+  </footer>
 
-<h2>Contact</h2>
-<p>
-Email: <span id="email"></span>
-<br>
-Phone: (864) 6&#56;&#54;-26&#49;&#55;
-</p>
-<script>
-  const user = "opc4";
-  const numbers = "4775";
-  const partial_domain = "gma";
-  document.getElementById("email").innerHTML =
-    `<a href="mailto:${user}${numbers}@${partial_domain}il.com">${user}${numbers}@${partial_domain}il.com</a>`;
-</script>
+  <script>
+    const user = "opc4";
+    const numbers = "4775";
+    const partial_domain = "gma";
+    document.getElementById("email").innerHTML =
+      `<a href="mailto:${user}${numbers}@${partial_domain}il.com">${user}${numbers}@${partial_domain}il.com</a>`;
+  </script>
 
-<footer>
-© Carter Modelling
-</footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
